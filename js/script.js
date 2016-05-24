@@ -56,16 +56,14 @@ window.onscroll = function() {
 
 $(document).ready(function(){
     $(".q").keyup($.debounce( 250, function(e){
-        var val=$(e.target).val();
-        if(val){
             $("#list").html("");
             page = -1;
             addPage(++page);
-        }
     }));
-    $(".check").click($.debounce( 250, function(e) {
+
+    $(".check").click(function(e) {
         $('#list').html("");
         page = -1;
         addPage(++page);
-    }));
+    });
 })
